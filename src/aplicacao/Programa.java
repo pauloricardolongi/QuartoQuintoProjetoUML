@@ -6,6 +6,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entidades.Funcionario;
+import entidades.FuncionarioTercerizado;
 
 public class Programa {
 
@@ -30,6 +31,13 @@ public class Programa {
 			int horas = sc.nextInt();
 			System.out.print("Valor por hora: ");
 			double valorPorHora = sc.nextDouble();
+			
+			if (ch == 's') {
+				System.out.print("Digite o valor da Despesa Adicional: ");
+				double despesaAdicional = sc.nextDouble();
+				Funcionario ft = new FuncionarioTercerizado(nome,horas, valorPorHora, despesaAdicional);
+				list.add(ft);
+			}
 			
 			
 			
