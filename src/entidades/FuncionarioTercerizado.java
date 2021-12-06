@@ -20,6 +20,9 @@ public class FuncionarioTercerizado extends Funcionario {
 	public void setDespesaAdicional(Double despesaAdicional) {
 		this.despesaAdicional = despesaAdicional;
 	}
-
+    @Override
+    public double pagamento() {
+    	return super.pagamento() + despesaAdicional * 1.1;
+    }
 	
 }
