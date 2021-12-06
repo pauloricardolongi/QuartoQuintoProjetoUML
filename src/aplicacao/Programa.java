@@ -15,11 +15,23 @@ public class Programa {
 		Scanner sc = new Scanner(System.in);
 		
 		List<Funcionario>list = new ArrayList<>();
+		
 		System.out.println("Entre com o número de funcionários: ");
 		int n = sc.nextInt();
 		
 		for (int i=1; i<=n; i++) {
-			System.out.println("Dados do Funcionário #:" + i);
+			System.out.println("Dados do Funcionário número:" + i);
+			System.out.print("O funcionário é tercerizado(s/n)? ");
+			char ch = sc.next().charAt(0);
+			System.out.print("Nome: ");
+			sc.nextLine();
+			String nome = sc.nextLine();
+			System.out.print("Horas:");
+			int horas = sc.nextInt();
+			System.out.print("Valor por hora: ");
+			double valorPorHora = sc.nextDouble();
+			
+			
 			
 		}
 		sc.close();
