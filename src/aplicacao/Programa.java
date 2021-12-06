@@ -17,7 +17,7 @@ public class Programa {
 		
 		List<Funcionario>list = new ArrayList<>();
 		
-		System.out.println("Entre com o número de funcionários: ");
+		System.out.print("Entre com o número de funcionários: ");
 		int n = sc.nextInt();
 		
 		for (int i=1; i<=n; i++) {
@@ -35,16 +35,21 @@ public class Programa {
 			if (ch == 's') {
 				System.out.print("Digite o valor da Despesa Adicional: ");
 				double despesaAdicional = sc.nextDouble();
-				Funcionario ft = new FuncionarioTercerizado(nome,horas, valorPorHora, despesaAdicional);
-				list.add(ft);
+				Funcionario func = new FuncionarioTercerizado(nome,horas, valorPorHora, despesaAdicional);
+				list.add(func);
 			}
 			else {
-				Funcionario fx = new Funcionario(nome,horas, valorPorHora); 
+				Funcionario func = new Funcionario(nome,horas, valorPorHora); 
 					
-				list.add(fx);
+				list.add(func);
 			}
 			
 			
+		}
+		System.out.println();
+		System.out.println("PAGAMENTOS: ");
+		for (Funcionario func : list) {
+			System.out.println(func.getNome() + " - $ " + String.format("%.2f", func.pagamento()));
 		}
 		sc.close();
 
