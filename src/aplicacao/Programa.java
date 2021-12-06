@@ -38,7 +38,11 @@ public class Programa {
 				Funcionario ft = new FuncionarioTercerizado(nome,horas, valorPorHora, despesaAdicional);
 				list.add(ft);
 			}
-			
+			else {
+				Funcionario fx = new Funcionario(nome,horas, valorPorHora); 
+					
+				list.add(fx);
+			}
 			
 			
 		}
